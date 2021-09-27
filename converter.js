@@ -56,7 +56,7 @@ uOptions = [
                                     'squaremeter':      new Option('squaremeter', 'Square Meter', 1, true),
                                     'squarekilometer':  new Option('squarekilometer', 'Square Kilometer', 0.000001),
                                     'squarecentimeter': new Option('squarecentimeter', 'Square Centimeter', 10000),
-                                    'hectar':           new Option('hectare', 'Hectare', 0.0001),
+                                    'hectare':           new Option('hectare', 'Hectare', 0.0001),
                                     'squaremile':        new Option('squaremile', 'Square Mile', 3.861018768E-7),
                                     'squareyard':       new Option('squareyard', 'Square Yard', 1.1959900463),
                                     'squareinch':       new Option('squareinch', 'Square Inch', 1550.0031)
