@@ -125,6 +125,8 @@ document.body.addEventListener('input', e => {
     if (e.target == selectUnit){
         selectLeft.innerHTML = ""
         selectRight.innerHTML = ""
+        inputLeft.value = ""
+        inputRight.value = ""
         for (let opt of uOptions){
             // If iterated Unit Option is equal to already selected unit
             if (selectUnit.value == opt.value){
@@ -136,7 +138,7 @@ document.body.addEventListener('input', e => {
             }
         }
     }
-
+        
         // Changes Input/Output Values when Base Units are changed
         sUnitOptions = Array.from(selectUnit.options)
 
@@ -152,5 +154,5 @@ document.body.addEventListener('input', e => {
         if(inputLeft.value != undefined || inputLeft.value != ""){
             inputRight.value = convert(inputLeft.value, leftB, rightB)
         }
-
+        
 })
