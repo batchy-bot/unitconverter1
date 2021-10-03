@@ -19,7 +19,7 @@ option{
     color: white;
 }
 select option:checked{
-    background-color: grey;
+    background-color: var(--basecoldark);
 }
 body {
     padding: 0;
@@ -41,6 +41,20 @@ body {
     width: 55%;
     justify-content: center;
     align-items: baseline;
+    position: relative;
+    top: -90px;
+    opacity: 0;
+    animation-name: show_titlefield;
+    animation-timing-function: ease-in;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+@keyframes show_titlefield {
+
+    to{
+        top: 0;
+        opacity: 1;
+    }
 }
 #title-bar-back {
     display: flex;
@@ -49,6 +63,7 @@ body {
     border-radius: 0 0 100vw 100vw;
     justify-content: center;
     height: 12vh;
+    
 }
 #title-bar{
     display: flex;
@@ -60,6 +75,7 @@ body {
     border-radius: 0 0 100vw 100vw;   
     padding: 0;
 }
+
 #title-bar h1 {
     font-size: 200%;
     color: var(--basecol)
@@ -83,32 +99,51 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 60%;
-    min-width: 300px;
     height: 90%;
     border-radius: 5vw;
     box-shadow: 0px 20px 0px #5A979F;
+    opacity: 0;
+    animation-name: show_container;
+    animation-duration: .6s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    width: 60%;
 }
+@keyframes show_container {
+    0%{
+        display: flex;
+        opacity: 1;
+        top: -50px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+        min-width: 300px;
+    }
+}
+
 #select-unit-field {
     margin-top: 10px;
     align-items: center;
     flex-direction: column;
-    width: 30%;
+    width: 90%;
     height: 20%;
     justify-content: space-evenly;
 }
 #select-unit-field h3{
     font-size: 130%;
 }
-#select-unit-field select {
+#select-unit-field #unit-select {
     padding: 0;
     background-color: var(--basecol);
     color: white;
-    width: 70%;
+    width: 30%;
     height: 40%;
     text-align: center;
     border-radius: 1.5vh;
-    font-size: 1.6vw;
+    font-size: 100%;
     font-weight: 500;
     text-transform: uppercase;
     transition-property: background-color;
@@ -162,7 +197,8 @@ input {
     background-color: var(--basecol);
     color: white;
     text-align: center;
-    font-size: 200%;
+    font-size:150%;
+    text-transform: uppercase;
     height: 30%;
     font-weight: 500;
     width: 102%;
@@ -199,10 +235,14 @@ footer{
     #left-input-container,
     #right-input-container{
         width: 80%;
-        height: 50%;
+        height: 100%;
     }
     #input-output-container{
         flex-direction: column;
         align-items: center;
     }
+    #select-unit-field #unit-select {
+        width: 50%;
+    }
 }
+
