@@ -50,7 +50,6 @@ body {
     animation-fill-mode: forwards;
 }
 @keyframes show_titlefield {
-
     to{
         top: 0;
         opacity: 1;
@@ -181,7 +180,8 @@ body {
 {
     width: 100%;
 }
-input {
+#input-left,
+#input-right {
     height: 100%;
     border-radius: 20px 20px 0px 0px;
     border: 3px solid var(--basecol);
@@ -244,5 +244,21 @@ footer{
     #select-unit-field #unit-select {
         width: 50%;
     }
+    #left-input-container select,
+    #right-input-container select
+    {
+        font-size: 100%;
+        height: 100%;
+    }
+    #input-right,
+    #input-left{
+        font-size: 200%;
+    }
+    #main-content{
+        justify-content: space-evenly;
+    }
+    #title-bar-back,
+    #title-bar{
+        border-radius: 0 0 20px 20px;
+    }
 }
-
